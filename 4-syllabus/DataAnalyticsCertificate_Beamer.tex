@@ -1,0 +1,355 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+%================================================
+% Animation flag
+%================================================
+% Set exactly ONE of the following two lines:
+\newif\ifanimations
+\animationstrue       % animations ON: bullet lists reveal progressively
+% \animationsfalse    % animations OFF: all overlay content shown at once
+
+\ifanimations
+  \documentclass[aspectratio=169,11pt,t]{beamer}
+\else
+  \documentclass[aspectratio=169,11pt,t,handout]{beamer}
+\fi
+
+% Based on the style of w01a_SyllabusIntro.tex
+\usetheme{SimplePlus}
+\usecolortheme{default}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{qrcode}
+
+\definecolor{PittBlue}{RGB}{0,53,148}
+\definecolor{PittGold}{RGB}{255,184,28}
+\setbeamercolor{palette primary}{bg=PittBlue,fg=white}
+\setbeamercolor{palette secondary}{bg=PittBlue!85!black,fg=white}
+\setbeamercolor{palette tertiary}{bg=PittGold,fg=black}
+\setbeamercolor{frametitle}{bg=PittBlue,fg=white}
+\setbeamercolor{title}{fg=PittBlue}
+\setbeamercolor{structure}{fg=PittBlue}
+\setbeamertemplate{navigation symbols}{}
+
+% Put every frame title in a consistent bar at the very top of the slide.
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.8ex,dp=1.1ex,leftskip=0.55cm,rightskip=0.55cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}%
+}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[default]
+
+% Animation control:
+%   \animationstrue  -> progressive overlays are enabled
+%   \animationsfalse -> handout mode; all overlay content appears at once
+\newcommand{\smallitem}{\setlength\itemsep{2pt}}
+\newcommand{\tightitems}{\setlength\itemsep{1pt}\setlength\parskip{0pt}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{Z}{>{\RaggedRight\arraybackslash}p{0.30\textwidth}}
+
+\title[Engineering Data Analytics Certificate]{Engineering Data Analytics Certificate}
+\subtitle{Programming, Statistics, Machine Learning, and Engineering Applications}
+\author{Prof. Paul W. Leu}
+\institute{University of Pittsburgh}
+\date{Fall 2026}
+
+\begin{document}
+
+\begin{frame}[t]
+  \titlepage
+\end{frame}
+
+\begin{frame}[t]{Why Data Analytics?}
+\large
+Data is changing how engineers design, manufacture, optimize, and make decisions.
+
+\vspace{0.35cm}
+\begin{itemize}[<+->]
+  \smallitem
+  \item Companies have strong demand for engineers who can analyze data and communicate results.
+  \item Data analytics skills complement every engineering major.
+  \item The certificate helps document a coherent set of skills on your record.
+\end{itemize}
+
+\vspace{0.35cm}
+\uncover<4->{\begin{center}
+\Large \textbf{Goal:} combine engineering domain knowledge with modern data methods.
+\end{center}}
+\end{frame}
+
+\begin{frame}[t]{Skills in Demand}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\textbf{Core technical skills}
+\begin{itemize}[<+->]
+  \tightitems
+  \item Program in R or Python
+  \item Analyze data with statistics
+  \item Build and interpret models
+  \item Use machine learning and AI tools
+  \item Make clear visualizations
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{Engineering applications}
+\begin{itemize}[<+->]
+  \tightitems
+  \item Make better decisions
+  \item Optimize supply chains
+  \item Manufacture products
+  \item Manage energy systems
+  \item Develop new applications
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]{Career Motivation}
+\begin{columns}[T,onlytextwidth]
+\column{0.49\textwidth}
+\begin{block}{Projected growth}
+\centering
+{\Huge 34\%}\par
+\vspace{0.1cm}
+Projected growth in data-scientist jobs through 2034
+\end{block}
+
+\column{0.49\textwidth}
+\begin{block}{Salary signal}
+\centering
+{\Huge \$166K}\par
+\vspace{0.1cm}
+Average U.S. data-scientist salary as of early 2026
+\end{block}
+\end{columns}
+
+\vspace{0.45cm}
+\begin{center}
+\textbf{The certificate is a way to show employers that your engineering degree includes formal data-analytics training.}
+\end{center}
+\end{frame}
+
+\begin{frame}[t]{Certificate Structure}
+The Engineering Data Analytics Certificate requires \textbf{15 credits} organized around three domains.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{@{}lY@{}}
+\toprule
+\textbf{Domain} & \textbf{Purpose}\\
+\midrule
+1. Foundations & Programming and inferential statistics\\
+2. Expertise & Exploratory/applied data science plus modeling and prediction\\
+3. Specialization & A semester-long engineering data analytics project\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}[<+->]
+  \item At least \textbf{9 credits} must be beyond courses required for your major.
+  \item Students may count a maximum of \textbf{two major courses} toward the certificate.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Domain 1: Foundations}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\textbf{Data Science Programming}\par
+\vspace{0.15cm}
+Choose one course, such as:
+\begin{itemize}[<+->]
+  \tightitems
+  \item CEE 0109
+  \item CS 1501
+  \item ECE 1148
+  \item IE 0015
+  \item STAT 1060
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{Inferential Statistics}\par
+\vspace{0.15cm}
+Choose one course, such as:
+\begin{itemize}[<+->]
+  \tightitems
+  \item BioE 1000
+  \item ECE 0402
+  \item ENGR 0021
+  \item IE 1071
+  \item STAT 1000 / 1152 / 1361
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]{Domain 2: Expertise}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\textbf{Exploratory Applied Data Science}\par
+\vspace{0.15cm}
+Choose one course, such as:
+\begin{itemize}[<+->]
+  \tightitems
+  \item ENGR 1451/2451: Exploratory Data Science
+  \item ECE 1147 or ECE 1395
+  \item INFSCI 0510
+  \item MEMS 1300
+  \item CS 1675
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{Modeling and Prediction}\par
+\vspace{0.15cm}
+Choose one course, such as:
+\begin{itemize}[<+->]
+  \tightitems
+  \item ENGR 1453/2453
+  \item IE 1187
+  \item IE 1062 or IE 1072
+  \item INFSCI 1530
+  \item MEMS 1069 or MEMS 1145
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]{Domain 3: Specialization Project}
+The specialization requirement is a \textbf{semester-long Engineering Data Analytics project}.
+
+\vspace{0.25cm}
+Project options include:
+\begin{itemize}[<+->]
+  \tightitems
+  \item Senior Design with a substantial data-analytics component
+  \item Undergraduate research or independent research
+  \item ENGR 2451 or ENGR 2453, when allowed by the certificate rules
+  \item CEE 1323, IE 1171, IE 2064, or another approved project-based class
+\end{itemize}
+
+\vspace{0.2cm}
+\uncover<5->{Students should communicate early with the instructor, senior-design advisor, or research advisor about the certificate requirement.}
+\end{frame}
+
+\begin{frame}[t]{What Counts as a Data Analytics Project?}
+A qualifying project should involve writing code and performing a defensible data analysis, not only using spreadsheets or existing software.
+
+\vspace{0.25cm}
+\begin{itemize}[<+->]
+  \tightitems
+  \item Define the engineering or scientific problem.
+  \item Describe the dataset, variables, observations, and data source.
+  \item Clean and explore the data using plots and summaries.
+  \item Select, justify, and interpret a statistical or predictive model.
+  \item Challenge the results and discuss limitations.
+  \item Write a report with methods, results, interpretation, and conclusions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Certificate vs. IE Data Analytics Concentration}
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}lYY@{}}
+\toprule
+ & \textbf{Certificate} & \textbf{IE Concentration}\\
+\midrule
+Who can pursue it? & Engineering students in any department and even non-engineering students & IE students only\\
+Credits & 15 credits & 9 credits\\
+Interdisciplinary rule & 9 credits must be beyond major requirements & More focused within IE\\
+Project requirement & Includes a specialization project & Does not have the same certificate specialization structure\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{frame}
+
+\begin{frame}[t]{How to Plan Your Pathway}
+\begin{itemize}[<+->]
+  \smallitem
+  \item Start with the published course list, then compare it with your major requirements.
+  \item Make sure no more than two major courses are counted toward the certificate.
+  \item If you want a new course to count, send the course number and description to Dr. Leu and Dr. Streiner.
+  \item Course lists are expected to be updated periodically as Pitt adds new data-science offerings.
+  \item For project-based courses, confirm the data-analytics component early.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{How to Apply}
+\begin{enumerate}[<+->]
+  \smallitem
+  \item Use the SSOE form for adding minors and certificates to your plan of study.
+  \item Ask your undergraduate program coordinator or administrator for the form link.
+  \item It is usually best to wait until your final semester before graduating to add the certificate to your plan.
+  \item Check that the certificate appears correctly on your Academic Advising Report (AAR).
+  \item If a course does not seem to count correctly, contact Dr. Leu or Dr. Streiner.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{ENGR 1451/2451: Exploratory Data Science}
+\begin{columns}[T,onlytextwidth]
+\column{0.50\textwidth}
+\textbf{Counts toward the certificate}\par
+\vspace{0.25cm}
+Exploratory Data Science helps students turn real-world data into real-world answers.
+
+\vspace{0.25cm}
+\begin{itemize}[<+->]
+  \tightitems
+  \item Data exploration
+  \item Visualization
+  \item Predictive model development
+  \item Statistical reasoning
+\end{itemize}
+
+\column{0.46\textwidth}
+\begin{block}{Fall 2026}
+Tuesday and Thursday\par
+9:30--10:45 AM\par
+Benedum 1047
+\end{block}
+\begin{block}{Questions}
+Prof. Paul Leu\par
+\href{mailto:pleu@pitt.edu}{pleu@pitt.edu}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]{Where to Find More Information}
+\begin{columns}[T,onlytextwidth]
+\column{0.54\textwidth}
+\textbf{Explore courses, requirements, and application details.}
+
+\vspace{0.25cm}
+\begin{itemize}[<+->]
+  \item Website: Engineering \textrightarrow{} Industrial Engineering \textrightarrow{} Certificates
+  \item Ask your undergraduate program coordinator for planning and form details.
+  \item Contact Dr. Leu or Dr. Streiner for certificate-specific questions.
+\end{itemize}
+
+\vspace{0.2cm}
+\href{https://www.engineering.pitt.edu/departments/industrial/undergraduate/degrees/certificates/}{Certificate website}
+
+\column{0.40\textwidth}
+\centering
+\qrcode[height=3.3cm]{https://www.engineering.pitt.edu/departments/industrial/undergraduate/degrees/certificates/}
+
+\vspace{0.2cm}
+\small Scan for certificate information
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]{Questions?}
+\centering
+\Huge Engineering Data Analytics Certificate\\[0.35cm]
+\Large Programming \quad Statistics \quad AI/ML\\[0.7cm]
+\normalsize
+Prof. Paul W. Leu\par
+\href{mailto:pleu@pitt.edu}{pleu@pitt.edu}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,292 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+
+\usepackage{soul}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdftitle={ENGR 1451/2451 Exploratory Data Science Syllabus},
+  pdfauthor={Paul W. Leu},
+  pdfsubject={Fall 2026 Exploratory Data Science}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ENGR 1451/2451: Exploratory Data Science}
+\rhead{Fall 2026}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlist[itemize]{leftmargin=*,itemsep=2pt,topsep=3pt}
+\setlist[enumerate]{leftmargin=*}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\title{\textbf{ENGR 1451/2451: Exploratory Data Science}\\
+Fall 2026}
+\author{Prof. Paul W. Leu\\University of Pittsburgh}
+\date{}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Course Information}
+
+\begin{tabular}{@{}ll@{}}
+\textbf{Courses:} & ENGR 1451 (undergraduate) and ENGR 2451 (graduate)\\
+\textbf{Instructor:} & Prof. Paul W. Leu\\
+\textbf{Email:} & \href{mailto:pleu@pitt.edu}{pleu@pitt.edu}\\
+\textbf{Semester:} & Fall 2026\\
+\textbf{Meeting time/location:} & 312 Benedum Hall Tuesdays and Thursdays 11:30 - 12:45 PM\\ 
+\textbf{Instructor Office hours:} & 9:30 to 10:30 AM Tuesdays in 218 F Bendum Hall\\
+\textbf{TA:} & Boyi Sun\\
+\textbf{Email:} & \href{mailto:BOS69@pitt.edu}{BOS69@pitt.edu}\\
+\textbf{TA Office hours:} & \\
+\textbf{Course site:} & University of Pittsburgh Canvas\\
+\end{tabular}
+
+\section{Course Description}
+Exploratory data science combines computational tools, statistical reasoning, visualization, and domain knowledge to understand real-world data. In this course, students will learn how to assemble, clean, explore, visualize, and interpret datasets; identify statistically meaningful relationships; and develop initial predictive models.
+
+The course will use \textbf{Python} as the primary programming language. Students will work with core scientific Python tools such as Jupyter, NumPy, pandas, Matplotlib, SciPy, statsmodels, and scikit-learn. Topics include data organization and cleaning, exploratory data analysis, visualization, probability and statistical inference, correlation, hypothesis testing, linear and logistic regression, classification, model evaluation, and reproducible data-science workflows.
+
+Examples will draw from engineering and scientific datasets, including time-series, spectral, image-derived, and multivariable data. Emphasis will be placed on interpreting results rather than simply producing numerical output.
+
+ENGR 1451 and ENGR 2451 meet together. Graduate students in ENGR 2451 complete additional work through a semester-long data-science project.
+
+\section{Course Learning Outcomes}
+
+By the end of the course, students should be able to:
+
+\begin{itemize}
+  \item Use Python to import, inspect, clean, transform, and organize data.
+  \item Use NumPy and pandas for numerical and tabular data analysis.
+  \item Create clear and informative data visualizations using Python.
+  \item Compute and interpret descriptive statistics and probability distributions.
+  \item Apply exploratory data analysis to identify structure, relationships, outliers, and potential data-quality problems.
+  \item Formulate and interpret statistical hypotheses and common inferential tests.
+  \item Build and interpret linear, multiple-linear, and logistic regression models.
+  \item Distinguish between explanatory, inferential, and predictive uses of models.
+  \item Evaluate models using appropriate training/testing and diagnostic approaches.
+  \item Apply domain knowledge to determine whether a data-science result is meaningful and defensible.
+  \item Use reproducible workflows with Jupyter notebooks, scripts, and version control.
+  \item Communicate data-science methods, assumptions, results, and limitations clearly in writing.
+\end{itemize}
+
+%\section{Prerequisites}
+%
+%Students should have completed an introductory programming course and an introductory probability/statistics course, or have equivalent experience. Students who are uncertain about their preparation should contact the instructor early in the semester.
+
+\section{Computing Environment}
+
+Python 3 will be used throughout the course. The recommended environment is JupyterLab/Jupyter Notebook or VS Code with a Python environment containing the packages used in class. Course setup instructions will be provided through Canvas.
+
+Students should expect to use the following tools:
+
+\begin{itemize}
+  \item Python 3
+  \item JupyterLab or Jupyter Notebook
+  \item NumPy and pandas
+  \item Matplotlib and related visualization tools
+  \item SciPy and statsmodels
+  \item scikit-learn
+  \item Git/GitHub for version control and reproducible workflows where appropriate
+  \item Canvas for course materials and assignment submission
+\end{itemize}
+
+%R and RStudio are \textbf{not required} for this offering.
+
+\section{Course Format}
+
+The course uses a practicum approach that combines conceptual foundations with hands-on data analysis.
+
+\begin{itemize}
+  \item \textbf{Foundation:} statistical concepts, data-science principles, interpretation, and discussion.
+  \item \textbf{Practicum:} Python demonstrations, coding exercises, visualization, and analysis of real datasets.
+\end{itemize}
+
+Students are expected to engage actively with both components. The goal is not only to execute Python code, but also to understand why an analysis is appropriate, what assumptions it makes, and how its results should be interpreted.
+
+\section{Readings and Course Materials}
+
+Course notes, example notebooks, datasets, and required readings will be distributed through Canvas. Useful references include:
+
+\begin{itemize}
+  \item Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor, \emph{An Introduction to Statistical Learning: with Applications in Python}.
+  \item OpenIntro, \emph{OpenIntro Statistics}.
+  \item Jake VanderPlas, \emph{Python Data Science Handbook}.
+  \item Python, NumPy, pandas, Matplotlib, SciPy, statsmodels, and scikit-learn documentation as assigned.
+\end{itemize}
+
+Readings should be completed before the class meeting for which they are assigned.
+
+\section{Assessment and Grading}
+
+Assessment emphasizes both computational practice and individual written understanding. Lab exercises use Python, in-class quizzes provide short checks of ongoing understanding, and the midterm and final examinations are \ul{written assessments completed without a Python environment}. % unless an approved accommodation requires an alternative format.
+
+\subsection{ENGR 1451}
+
+ENGR 1451 is weighted as follows:
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Assessment} & \textbf{Weight}\\
+\midrule
+Lab Exercises & 20\\
+In-class Quizzes & 25\\
+Written Midterm Exam & 25\\
+Written Final Exam & 30\\
+\midrule
+\textbf{Total} & \textbf{100}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{ENGR 2451}
+
+ENGR 2451 is weighted on a 140-point basis:
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Assessment} & \textbf{Weight}\\
+\midrule
+Lab Exercises & 20\\
+In-class Quizzes & 25\\
+Written Midterm Exam & 25\\
+Written Final Exam & 30\\
+Six written semester-project updates & 15\\
+Final semester project submission & 25\\
+\midrule
+\textbf{Total} & \textbf{140}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Final letter grades may be adjusted based on overall class performance.
+
+\subsection{Written Midterm and Final Exams}
+
+The midterm and final are designed to assess data-science understanding independently of access to computational tools. Unless otherwise specified, they will be completed by hand during the scheduled examination period.
+
+Written exams may include:
+
+\begin{itemize}
+  \item short-answer conceptual questions;
+  \item interpretation of figures, tables, statistical output, and model results;
+  \item calculations and statistical reasoning;
+  \item selection and justification of appropriate analysis methods;
+  \item reading, explaining, or debugging short Python code snippets; and
+  \item writing short Python statements, algorithms, or pseudocode when appropriate.
+\end{itemize}
+
+Students should focus on understanding the logic of an analysis rather than memorizing large amounts of Python syntax. Electronic devices, internet access, generative-AI tools, and coding environments are not permitted during written exams unless explicitly authorized by the instructor or required by an approved accommodation.
+
+\subsection{Lab Exercises}
+
+Lab exercises require students to apply Python and statistical methods to real or realistic datasets. Submissions should be organized, legible, reproducible, and should explain the student's reasoning, methods, and interpretation of results. Code alone is not a complete analysis.
+
+Lab exercises are submitted through Canvas by the posted deadline. Unless otherwise noted, late lab exercises lose one point for each day they are late.
+
+Students should retain working copies of all submitted notebooks, scripts, data files, and figures.
+
+\subsection{In-class Quizzes}
+
+In-class quizzes provide short, low-stakes checks of understanding throughout the semester. Quizzes may assess recent concepts, interpretation of figures or statistical output, statistical reasoning, short calculations, and reading or writing brief Python code or pseudocode.
+
+Quizzes will generally be completed during class without electronic devices, internet access, generative-AI tools, or a Python environment unless otherwise specified by the instructor. The lowest quiz score will be dropped when calculating the in-class quiz grade.
+
+\subsection{ENGR 2451 Semester Project}
+
+ENGR 2451 students complete a semester-long exploratory data-science project related to an engineering, scientific, or research problem. The project should include:
+
+\begin{itemize}
+  \item a clearly defined question or objective;
+  \item an appropriately documented dataset;
+  \item data cleaning and exploratory analysis;
+  \item visualization and statistical/modeling methods appropriate to the question;
+  \item interpretation of results and limitations;
+  \item reproducible Python code; and
+  \item a polished final written report.
+\end{itemize}
+
+The six project updates are intended to encourage steady progress and provide opportunities for feedback before the final submission.
+
+\section{Generative AI and Collaboration}
+
+Collaboration is encouraged on learning, debugging, and discussion of lab exercises unless an assignment states otherwise. Each student must submit their own work and must understand and be able to explain the code, analysis, and conclusions they submit.
+
+Generative-AI tools may be used on lab exercises when allowed by the assignment. They may be used to help explain concepts, troubleshoot code, or suggest approaches, but students remain responsible for verifying all generated code and claims. Submitting AI-generated material that the student does not understand is not acceptable. When an assignment requests disclosure or citation of AI use, students must provide it.
+
+Generative-AI tools are not permitted on in-class quizzes, the written midterm, or the written final exam unless explicitly authorized by the instructor.
+
+\section{Tentative Course Schedule}
+
+The schedule below provides the planned sequence of topics. Specific readings, lab due dates, quiz dates, and exam dates will be posted on Canvas. The instructor may adjust the pace based on class progress.
+
+\begin{longtable}{@{}p{1.2cm}p{5.3cm}p{7.5cm}@{}}
+\toprule
+\textbf{Week} & \textbf{Foundation} & \textbf{Python Practicum / Applications}\\
+\midrule
+\endhead
+1 & Introduction to exploratory data science and reproducibility & Python/Jupyter workflow; Git basics; loading and inspecting data\\
+2 & Data types, variables, and data organization & Python fundamentals; NumPy; pandas Series and DataFrames\\
+3 & Data quality and exploratory analysis & Importing, cleaning, indexing, filtering, missing data, and transformations\\
+4 & Summarizing and visualizing data & Descriptive statistics; distributions; Matplotlib; exploratory graphics\\
+5 & Random variables and probability distributions & Simulation; sampling; empirical distributions; engineering examples\\
+6 & Relationships among variables & Correlation, covariance, pair plots, multivariable exploration\\
+7 & Foundations of statistical inference & Sampling distributions, confidence intervals, hypothesis testing; midterm review\\
+8 & \textbf{Written Midterm Exam}; reusable analysis workflows & Functions, modular code, notebook organization, reproducibility\\
+9 & Categorical data and contingency tables & Proportions, chi-square methods, categorical visualization\\
+10 & Numerical inference & One- and two-sample tests; effect size; uncertainty; SciPy/statsmodels\\
+11 & Statistical power and study design & Sample size, practical significance, interpretation of uncertainty\\
+12 & Linear regression & Fitting, interpreting, and diagnosing regression models; train/test concepts\\
+13 & Multiple regression and model selection & Multiple predictors, interactions, collinearity, variable selection, diagnostics\\
+14 & Logistic regression and classification & Classification metrics; logistic regression; scikit-learn workflow\\
+15 & Statistical learning overview and synthesis & Model comparison; reproducible analysis; final exam review\\
+\bottomrule
+\end{longtable}
+
+The University-scheduled final-examination period will be used for the \textbf{written final exam}.
+
+\section{Course Policies}
+
+\subsection{Attendance and Participation}
+
+Regular attendance and participation are expected. Class meetings include discussion, examples, and practicum work that may not be reproduced fully in the posted materials.
+
+\subsection{Communication}
+
+Canvas is the primary source for announcements, due dates, course files, and changes to the schedule. Students are responsible for checking Canvas regularly. Email is the preferred method for individual questions that should not be discussed publicly.
+
+\subsection{Academic Integrity}
+
+Students are expected to follow the University of Pittsburgh's standards for academic integrity. Unless collaboration is explicitly permitted, submitted work must represent the student's own effort. Unauthorized assistance on in-class quizzes or written examinations, including the use of generative-AI tools, is prohibited.
+
+Students should cite or acknowledge external resources used in assignments when appropriate, including books, websites, code examples, classmates, and generative-AI tools when their use is permitted.
+
+\subsection{Disability and Accessibility Accommodations}
+
+Students who require accommodations should work with the University of Pittsburgh's Disability Resources and Services (DRS) and notify the instructor as early as practical. Approved accommodations will be implemented for course activities and written examinations.
+
+\subsection{Changes to the Syllabus}
+
+This syllabus describes the planned structure of the course. The instructor may make reasonable changes to topics, deadlines, or procedures during the semester. Any substantive changes will be announced through Canvas.
+
+\end{document}

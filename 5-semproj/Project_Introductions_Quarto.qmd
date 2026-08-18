@@ -1,0 +1,154 @@
+---
+title: "ENGR 2451 Project Introductions"
+author: "Paul Leu"
+date: today
+date-format: "D MMMM, YYYY"
+format:
+  revealjs:
+    incremental: true
+    embed-resources: true
+    center: false
+execute:
+  enabled: true
+  echo: true
+  warning: true
+jupyter: python3
+---
+
+```{python}
+#| label: setup
+#| include: false
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+pd.options.display.precision = 5
+plt.rcParams["figure.figsize"] = (6, 4.5)
+plt.rcParams["figure.dpi"] = 300
+```
+
+## Introduction
+
+* Prof. Paul Leu
+
+* TA: Boyi Sun
+
+## Semester Projects
+
+* SemProjects have a approximately bi-weekly progress update due Friday's at 11:59 pm (6 updates)
+
+## Bi-weekly Updates
+
+* Each update should be made in the report template found in the Repo with each update
+  + Fill out the update for each week
+  + Helps with grading
+  + For you to track what you are going to be doing
+  + Update includes what you did, read, tried, and what you are planning to do the next time
+* The Report template is written as outputting a pdf, it can be changed to html if necessary
+* Submitted in Canvas (Friday by 11:59 pm)
+  + pdf or html
+  + .rmd file (I need to see your code!)
+* Comments will be given in Canvas
+
+## Report Outs 
+
+* SemProj Report Out #1, W5, 9-29-2023 (recorded 10 min presentation)
+  + Explain the 'why' of your research project
+  + Describe your dataset
+  + Present a data analysis plan
+  + Clean your data
+
+## Report Outs 
+
+* SemProj Report Out #2, W9 10-27-2023 (recorded 10 min presentation)
+  + EDA of your data
+  + Visualize your data
+  + Further cleaning of your data
+  + Reevaluation of your data analysis plan (Do you need more data?)
+
+## Report Outs 
+
+* SemProj Report Out #3 W15 12-1-2023 (recorded 10 min presentation)
+  + More data visualization
+  + Initial modeling
+  + Conlusions about your data
+  + Were you able to answer your why question? 
+  + What else would you need to do to get to understanding your data better?
+
+## Final Report
+
+* SemProj Report is full comprehensive written project
+  + report template updated from each report
+
+## Office Hours      
+
+* In Canvas there will be a zoom link
+* Abhishek will host office hours
+
+## Slack
+
+* Use this!!!
+* dsci451-projects channel
+* We can chat on questions and learn from each other
+
+* Always tag us
+  + @Paul Leu
+  + @Boyi SUn
+
+## Choosing DataSets
+
+**Care should be taken when choosing datasets**
+
+* Are there enough rows and columns
+  + Too small datasets give you very little to learn
+  + Too large datasets need to be subset for a smaller scope
+* Are you interested in the topic?
+* Is the dataset too clean? 
+  + You want to learn to clean and handle data
+* You might need to add data from other locations
+
+## Databases for Open Datasets
+
+* [Kaggle](kaggle.com)
+* [Open Data Search Engine Article](https://www.theverge.com/2020/1/23/21078310/google-dataset-search-beta-over-filters-improved-open-source)
+* [Google DataSet Search](https://datasetsearch.research.google.com/)
+* [StackExchange](https://opendata.stackexchange.com/)
+* [Sports Data](https://www.sports-reference.com/)
+
+## Weekly Update 1
+
+* What is the problem?
+* Why is it interesting? (Introducing the data)
+* What does the data look like?
+* What do you see the outcome as?
+* What is your data science plan?
+
+## Applying Visualizations
+
+* Data Science is a tool to accomplish a task
+  + Problem solving
+   + Finding insights (Clients want insights)
+* Data Visualizations are the easiest ways to get visualization of data
+   + Find Problems
+   + Potential Solutions
+
+## Applying Visualizations
+
+* Data Visualizations are necessary for good communication
+   + **No matter how wonderful your coding is, it doesn't matter unless you can communicate**
+   + This class we will practice presentations to increase communications
+   + Rmarkdown is great for reports for communication early in a project through the final report
+* You can't build useful models without data visualizations
+    + Focus on visualizations in the first few reports
+
+## Community Learning
+
+ * Data science is still a growing field
+ * No one is an expert in all things
+ * Joining communities is paramount to learning
+  + Meetups (R and Python meetups in Cleveland)
+  + Blogs
+  + Podcasts
+  + Community groups
+  
+This class we want to have a community of learning!
