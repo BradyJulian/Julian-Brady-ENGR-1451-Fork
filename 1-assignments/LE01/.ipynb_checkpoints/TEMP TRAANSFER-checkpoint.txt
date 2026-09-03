@@ -1,0 +1,24 @@
+# 1. Pull the latest changes from the remote tracking branch
+echo "Pulling latest changes..."
+git pull
+
+# 2. Wait for the user to press any key
+echo ""
+read -n 1 -s -r -p "Press any key to stage, commit, and push changes..."
+echo ""
+echo ""
+
+# 3. Stage all changes
+echo "Staging changes..."
+git add .
+
+# 4. Generate the current date/time and commit
+CURRENT_DATE=$(date "+%Y-%m-%d %H:%M:%S")
+COMMIT_MSG="Saving progress, $CURRENT_DATE"
+
+echo "Committing with message: '$COMMIT_MSG'"
+git commit -m "$COMMIT_MSG"
+
+# 5. Push to the remote repository
+echo "Pushing to remote..."
+git push
