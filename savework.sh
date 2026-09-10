@@ -20,7 +20,7 @@
 
 set -euo pipefail
 
-REPO="$HOME/26f-engr1451-2451"
+REPO="$HOME/Julian-Brady-ENGR-1451-Fork"
 WORK_BRANCH="student-work"
 
 if [[ ! -d "$REPO/.git" ]]; then
